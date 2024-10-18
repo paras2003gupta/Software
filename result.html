@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCOMO Estimation Results</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .result {
+            background: linear-gradient(135deg, #ffffff, #ffecd2);
+            width: 85%;
+            max-width: 750px;
+            margin: 50px auto;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .result:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        .result h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: #ff8c00;
+        }
+        .result p {
+            font-size: 1.4rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            font-size: 1.6rem;
+            color: #ff4500;
+            font-weight: bold;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #ff8c00, #f4511e);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        a:hover {
+            background: linear-gradient(135deg, #ff7f50, #e65100);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <h2>Project Details</h2>
+        <p>Project Type: <span class="highlight">{{ model_type }}</span></p>
+        <p>Project Size: <span class="highlight">{{ kloc }} KLOC</span></p>
+        <p>Estimated Effort: <span class="highlight">{{ effort }} person-months</span></p>
+        <p>Estimated Development Time: <span class="highlight">{{ dev_time }} months</span></p>
+        <p>Average Staff Size: <span class="highlight">{{ avg_staff_size }} persons</span></p>
+        <p>Productivity: <span class="highlight">{{ productivity }} KLOC/person-month</span></p>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
