@@ -27,6 +27,9 @@ def calculate_cocomo(model_type, kloc):
 def home():
     return render_template('index.html')
 
+
+
+
 # Route for handling form submission
 @app.route('/calculate', methods=['POST'])
 def calculate():
@@ -37,6 +40,9 @@ def calculate():
     return render_template('result.html', model_type=model_type, kloc=kloc, 
                            effort=effort, dev_time=dev_time, 
                            avg_staff_size=avg_staff_size, productivity=productivity)
+@app.route('/result')
+def result():
+    return render_template('result.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
