@@ -56,10 +56,6 @@ def calculate_cocomo(model_type, kloc):
 def home():
     return render_template('index.html')
 
-@app.route('/result')
-def result():
-    return render_template('result.html')
-
 
 
 # Route for handling form submission
